@@ -47,6 +47,6 @@ Now, let's set us up the toggle switch so that you can turn this one. Take this 
             <span class="slider round"></span>
           </label>
 ```
-Notice, I'm using Phosphor icons to show a moon and a sun, so that it's more apparent what each toggle position does. You'll want to go to <a href="https://phosphoricons.com" target="_blank"> to get yourself these icons for your own site. I do not recommend using font-awesome, since they've gone full-greed mode.
+Notice, I'm using Phosphor icons to show a moon and a sun, so that it's more apparent what each toggle position does. You'll want to go to <a href="https://phosphoricons.com" target="_blank">this website</a> to get yourself these icons for your own site. I do not recommend using font-awesome, since they've gone full-greed mode.
 
 Now, with all this code, and both scripts, you should have no problems customizing this to your liking! Enjoy!
