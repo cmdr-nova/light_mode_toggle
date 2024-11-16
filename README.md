@@ -118,3 +118,5 @@ On your desktop version of the toggle, include "desktop-only" as a class, and in
 There are settings within the light mode script that ensure having *two* toggles on your site will stay synchronized, instead of breaking.
 
 Now, with all this code, and both scripts, you should have no problems customizing this to your liking! Enjoy!
+
+Extra beefy pro max sidenote: You can use the desktop-only and mobile-only classes to show and hide many other things on your website, depending on what kind of screen users are viewing it with!
