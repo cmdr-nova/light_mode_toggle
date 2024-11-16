@@ -27,7 +27,9 @@ Albeit, you don't *need* to put the script into /assets/js, that's just *my* web
 
 Anyway, in order to get this working, do what's described above, and then this ...
 
-In every element in your CSS that depicts a color, be it for your background, or your links, you're going to want to make a sister element that says, "Hey, so, this is going to be the light mode version." For example:
+In every element in your CSS that depicts a color, be it for your background, or your links, you're going to want to make a sister element that says, "Hey, so, this is going to be the light mode version."
+
+For example:
 
 ```
 body {
