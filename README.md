@@ -73,4 +73,48 @@ Now, let's set us up the toggle switch so that you can turn this one. Take this 
 ```
 Notice, I'm using Phosphor icons to show a moon and a sun, so that it's more apparent what each toggle position does. You'll want to go to <a href="https://phosphoricons.com" target="_blank">this website</a> to get yourself these icons for your own site. I do not recommend using font-awesome, since they've gone full-greed mode.
 
+If you want a switch that *only* shows for mobile users, just-in-case you have elements of your site that are hidden when on smaller screens (therefore, possibly hiding your toggle switch), you can do this to give mobile users a toggle of their own.
+
+```
+    <!-- Mobile Light Mode Toggle -->
+      <div id="mobile-light-mode-toggle" class="mobile-only center">
+        <p class="symbols">
+          <i class="ph ph-moon"></i> / <i class="ph ph-sun"></i>
+        </p>
+        <label class="switch">
+          <input type="checkbox" id="mobile-light-mode-checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+```
+Ignore the "center", and "symbols" classes, these are just elements I use for divs and styling on my own site. But, now, here's the associated CSS styling to make this work, *specifically*.
+
+```
+/* Show the desktop-only content on desktop devices */
+@media (min-width: 481px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Hide the mobile toggle on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Show the mobile toggle on mobile devices */
+@media (max-width: 480px) {
+  .mobile-only {
+    display: block;
+  }
+
+  #sidebar .switch {
+    display: none;
+  }
+}
+```
+On your desktop version of the toggle, include "desktop-only" as a class, and in the mobile version of the switch, include "mobile-online." In this way, the switch will move positions depending on whether you're viewing the site on desktop, or on mobile. I'm using anything greater than 481 pixels for desktop, and anything 480 pixels or below for mobile. I've tested this on the <a href="https://vivaldi.com" target="_blank">Vivaldi</a> browser responsive settings in the developer mode, and this seems to work best. You can, *of course*, completely change this, if you like.
+
+There are settings within the light mode script that ensure having *two* toggles on your site will stay synchronized, instead of breaking.
+
 Now, with all this code, and both scripts, you should have no problems customizing this to your liking! Enjoy!
