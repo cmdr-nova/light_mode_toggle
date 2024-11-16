@@ -113,7 +113,7 @@ Ignore the "center", and "symbols" classes, these are just elements I use for di
   }
 }
 ```
-On your desktop version of the toggle, include "desktop-only" as a class, and in the mobile version of the switch, include "mobile-only." I had to make a "desktop-only" class, because things were acting kind of weird *only* having a class that shows a mobile version. In this way, the switch will move positions depending on whether you're viewing the site on desktop, or on mobile. I'm using anything greater than 481 pixels for desktop, and anything 480 pixels or below for mobile. I've tested this on the <a href="https://vivaldi.com" target="_blank">Vivaldi</a> browser responsive settings in the developer mode, and this seems to work best. You can, *of course*, completely change this, if you like.
+On your desktop version of the toggle, include "desktop-only" as a class, and in the mobile version of the switch, include "mobile-only." I had to make a "desktop-only" class, because things were acting kind of weird *only* having a class that shows a mobile version. In this way, the switch will move positions depending on whether you're viewing the site on desktop, or on mobile. I'm using anything greater than 481 pixels for desktop, and anything 480 pixels or below for mobile. I've tested this on the <a href="https://vivaldi.com" target="_blank">Vivaldi</a> browser (I personally recommend Vivaldi, since Mozilla has recently transitioned into an ad company) responsive settings in the developer mode, and this seems to work best. You can, *of course*, completely change this, if you like.
 
 There are settings within the light mode script that ensure having *two* toggles on your site will stay synchronized, instead of breaking.
 
