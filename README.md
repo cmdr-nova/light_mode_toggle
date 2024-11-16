@@ -3,7 +3,29 @@ A light mode toggle for your website!
 
 This is a simple piece of JavaScript that will enable you to easily setup a light mode toggle for your website. I'm putting this here on Github, because, like with most things related to development and web development, documentation and how-tos are few and far between, scattered, random, and hard to find in-general. All you have to do is copy the provided files into your JavaScript path, and then start setting up the elements (which I can't do for you, unfortunately).
 
-In order to get this working, do what's described above, and then this ...
+What these scripts do, is, the initial state script helps the main toggle script determine what position the user has the slider in, so that it can be consistent across all pages. This *may* cause some flicker, but you can put a transition on the body in order to make it look smoother.
+
+Example:
+```
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+```
+This will effectively ensure that, even if there's a little bit of a transition with light mode toggled on, it'll smooth out when navigating between pages. I am, unfortunately, *still* trying to figure out how to make the saved light state be 100% consistent in that it doesn't need to transition between page loads on separate navigation.
+
+Your script setup should be like this:
+
+```
+<head>
+<!-- head content, like meta tags and title, and what-not -->
+<script src="/assets/js/initial-state.js"></script> <!-- load this script first -->
+<!-- the rest of your scripts -->
+<script src="/assets/js/light-mode.js"></script>
+</head>
+```
+Albeit, you don't *need* to put the script into /assets/js, that's just *my* website structure.
+
+Anyway, in order to get this working, do what's described above, and then this ...
 
 In every element in your CSS that depicts a color, be it for your background, or your links, you're going to want to make a sister element that says, "Hey, so, this is going to be the light mode version." For example:
 
